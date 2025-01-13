@@ -3,10 +3,12 @@ package com.javaproject.shopping_cart.service.product;
 import java.util.List;
 
 import com.javaproject.shopping_cart.model.Product;
+import com.javaproject.shopping_cart.requests.AddProductRequest;
 
 public interface IProductService {
 	
-	Product addProduct(Product product);
+	
+	Product addProduct(AddProductRequest request);
 	Product getProductById(Long id);
 	void deleteProductById(Long id);
 	void updateProduct(Product product,Long id);
@@ -17,6 +19,7 @@ public interface IProductService {
 	List<Product> getProductsByCategoryAndBrand(String category,String brand);
 	List<Product> getProductsByNameAndBrand(String name,String brand);
 	List<Product> countProductsByNameAndBrand(String name,String brand);
+	
 	
 	
 	

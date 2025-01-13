@@ -38,4 +38,14 @@ public class Product {
 	@OneToMany(mappedBy="product",cascade=CascadeType.ALL,orphanRemoval=true)//if there is no product, image also deleted
 	private List<Image> images;
 
+	public Product(String name, String description, double price, int inventory, String brand, Category category) {
+		super();
+		this.name = name;
+		this.description = description;
+		this.price = price;
+		this.inventory = inventory;
+		this.brand = brand;
+		this.category = category;
+	}
+
 }

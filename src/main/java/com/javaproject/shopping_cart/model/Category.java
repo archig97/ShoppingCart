@@ -19,6 +19,10 @@ import lombok.Setter;
 @Entity
 public class Category {
 	
+	public Category(String name2) {
+		// TODO Auto-generated constructor stub
+	}
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
